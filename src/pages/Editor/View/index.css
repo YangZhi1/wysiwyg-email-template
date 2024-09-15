@@ -1,0 +1,13 @@
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+.viewTitleContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f5f5f5;
+}
