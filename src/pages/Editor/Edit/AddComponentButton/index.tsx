@@ -1,21 +1,15 @@
 import { Button, Select, Space } from 'antd';
-import { EComponents } from '../../../../types/components';
+import { EComponentNameMap, EComponents } from 'src/types/components';
 import { useState } from 'react';
-import { componentsStore } from '../../../../store/componentsStore';
+import { componentsStore } from 'src/store/componentsStore';
 
 const AddComponentButton = () => {
   const [currentSelection, setCurrentSelection] = useState<EComponents>();
 
-  const selectOptions = [
-    {
-      value: EComponents.TITLE,
-      label: 'Title',
-    },
-    {
-      value: EComponents.BODY,
-      label: 'Body',
-    },
-  ];
+  const selectOptions = Object.values(EComponents).map((component) => ({
+    label: EComponentNameMap[component],
+    value: component,
+  }));
 
   return (
     <Space>

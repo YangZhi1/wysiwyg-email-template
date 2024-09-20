@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import './index.css';
-import { componentsStore } from '../../../store/componentsStore';
+import { componentsStore } from 'src/store/componentsStore';
 import ViewTitle from './Title';
 import ViewBody from './Body';
 

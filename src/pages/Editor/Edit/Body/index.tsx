@@ -1,8 +1,9 @@
 import { Form, Input } from 'antd';
+import { EComponentNameMap } from 'src/types/components';
 
 const Body = ({ name }: { name: string }) => {
   return (
-    <Form.Item label="Body" name={name}>
+    <Form.Item label={EComponentNameMap.BODY} name={name}>
       <Input />
     </Form.Item>
   );

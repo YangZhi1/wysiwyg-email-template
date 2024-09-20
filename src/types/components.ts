@@ -13,6 +13,11 @@ export enum EComponents {
   BODY = 'BODY',
 }
 
+export const EComponentNameMap: Record<EComponents, string> = {
+  [EComponents.TITLE]: 'Title',
+  [EComponents.BODY]: 'Body',
+};
+
 export type IComponentItem = {
   type: EComponents;
   key: string;

@@ -1,8 +1,8 @@
 import { Form, FormInstance } from 'antd';
 import './index.css';
-import { editorStore } from '../../../store/editorStore';
+import { editorStore } from 'src/store/editorStore';
 import AddComponentButton from './AddComponentButton';
-import { componentsStore } from '../../../store/componentsStore';
+import { componentsStore } from 'src/store/componentsStore';
 import { observer } from 'mobx-react';
 import { MinusCircleOutlined } from '@ant-design/icons';
 import React from 'react';

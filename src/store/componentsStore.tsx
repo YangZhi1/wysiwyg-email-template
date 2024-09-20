@@ -5,8 +5,8 @@ import {
   IComponentType,
 } from '../types/components';
 import { editorStore } from './editorStore';
-import { EditTitle, EditBody } from '../pages/Editor/Edit/exports';
-import { ViewBody, ViewTitle } from '../pages/Editor/View';
+import { EditTitle, EditBody } from 'src/pages/Editor/Edit/exports';
+import { ViewBody, ViewTitle } from 'src/pages/Editor/View';
 import { v4 as uuidv4 } from 'uuid';
 
 class ComponentsStore {
