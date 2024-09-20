@@ -4,3 +4,18 @@
   flex-direction: column;
   align-items: center;
 }
+
+.componentContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .removeIcon {
+    cursor: pointer;
+  }
+}

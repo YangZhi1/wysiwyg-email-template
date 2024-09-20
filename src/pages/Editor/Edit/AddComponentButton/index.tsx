@@ -11,6 +11,10 @@ const AddComponentButton = () => {
       value: EComponents.TITLE,
       label: 'Title',
     },
+    {
+      value: EComponents.BODY,
+      label: 'Body',
+    },
   ];
 
   return (
