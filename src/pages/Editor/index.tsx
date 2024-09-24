@@ -14,10 +14,15 @@ export const Editor = () => {
         label: 'Body Text',
         type: EComponents.BODY,
       },
+      number: {
+        label: 'Number',
+        type: EComponents.NUMBER,
+      },
     },
     initialValues: {
       name: 'Title',
       bodyText: 'Body Text',
+      number: 101010,
     },
   };
 
