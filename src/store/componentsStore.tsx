@@ -1,13 +1,15 @@
-import { action, computed, makeObservable, observable } from 'mobx';
+import { action, makeObservable, observable } from 'mobx';
 import {
   EComponents,
   IComponentItem,
   IComponentType,
+  IFormProps,
 } from '../types/components';
 import { editorStore } from './editorStore';
-import { EditTitle, EditBody } from 'src/pages/Editor/Edit/exports';
+import { EditTitle, EditBody } from 'src/pages/Editor/SingleForm/exports';
 import { ViewBody, ViewTitle } from 'src/pages/Editor/View';
 import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
 
 class ComponentsStore {
   components: IComponentItem[] = [];
@@ -26,10 +28,9 @@ class ComponentsStore {
     makeObservable(this, {
       components: observable,
 
+      // @to be removed
       addComponents: action,
       removeComponents: action,
-
-      editComponents: computed,
     });
   }
 
@@ -42,13 +43,21 @@ class ComponentsStore {
     this.components.splice(index, 1);
   };
 
-  get editComponents() {
-    return this.components.map((component) => {
-      const Component = this.editComponentMapping[component.type];
-      return {
-        key: component.key,
-        comp: <Component key={component.key} name={component.key} />,
-      };
+  getComponentsByFormLayout(
+    layout?: IFormProps['formLayout']
+  ): React.ReactNode[] {
+    if (!layout) return [undefined];
+    return Object.keys(layout).map((key) => {
+      const current = layout[key];
+      const Component = this.editComponentMapping[current.type];
+      return (
+        <Component
+          key={key}
+          name={key}
+          label={current.label}
+          type={current.type}
+        />
+      );
     });
   }
 

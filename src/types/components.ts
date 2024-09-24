@@ -23,6 +23,17 @@ export type IComponentItem = {
   key: string;
 };
 
-export type IComponentType = React.FC<{ name: string }>;
+export type IComponentProps = {
+  name: string;
+  label?: string;
+  type: EComponents;
+};
+
+export type IFormProps = {
+  formLayout?: Record<string, Omit<IComponentProps, 'name'>>;
+  initialValues?: Record<string, any>;
+};
+
+export type IComponentType = React.FC<IComponentProps>;
 
 export type IComponents = null | ITitle;
