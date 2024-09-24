@@ -12,7 +12,7 @@ export const Editor = () => {
       },
       bodyText: {
         label: 'Body Text',
-        type: EComponents.BODY,
+        type: EComponents.TITLE,
       },
       number: {
         label: 'Number',

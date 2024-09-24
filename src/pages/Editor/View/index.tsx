@@ -2,7 +2,6 @@ import { observer } from 'mobx-react';
 import './index.css';
 import { componentsStore } from 'src/store/componentsStore';
 import ViewTitle from './Title';
-import ViewBody from './Body';
 
 const View = () => {
   return (
@@ -15,4 +14,4 @@ const View = () => {
 
 export default observer(View);
 
-export { ViewTitle, ViewBody };
+export { ViewTitle };

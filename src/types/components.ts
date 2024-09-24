@@ -10,13 +10,11 @@ export type IBody = {
 
 export enum EComponents {
   TITLE = 'TITLE',
-  BODY = 'BODY',
   NUMBER = 'NUMBER',
 }
 
 export const EComponentNameMap: Record<EComponents, string> = {
   [EComponents.TITLE]: 'Title',
-  [EComponents.BODY]: 'Body',
   [EComponents.NUMBER]: 'Number',
 };
 
