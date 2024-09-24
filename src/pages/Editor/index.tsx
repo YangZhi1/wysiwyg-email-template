@@ -8,11 +8,11 @@ export const Editor = () => {
     formLayout: {
       name: {
         label: 'Name',
-        type: EComponents.TITLE,
+        type: EComponents.INPUT,
       },
       bodyText: {
         label: 'Body Text',
-        type: EComponents.TITLE,
+        type: EComponents.INPUT,
       },
       number: {
         label: 'Number',

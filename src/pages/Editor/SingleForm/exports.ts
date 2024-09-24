@@ -1,4 +1,4 @@
-import EditTitle from './Title';
+import Input from './Input';
 import InputNumber from './InputNumber';
 
-export { EditTitle, InputNumber };
+export { Input, InputNumber };

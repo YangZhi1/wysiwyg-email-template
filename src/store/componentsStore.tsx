@@ -6,7 +6,7 @@ import {
   IFormProps,
 } from '../types/components';
 import { editorStore } from './editorStore';
-import { EditTitle, InputNumber } from 'src/pages/Editor/SingleForm/exports';
+import { Input, InputNumber } from 'src/pages/Editor/SingleForm/exports';
 import { ViewTitle } from 'src/pages/Editor/View';
 import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
@@ -15,12 +15,12 @@ class ComponentsStore {
   components: IComponentItem[] = [];
 
   editComponentMapping: Record<EComponents, IComponentType> = {
-    [EComponents.TITLE]: EditTitle,
+    [EComponents.INPUT]: Input,
     [EComponents.NUMBER]: InputNumber,
   };
 
   viewComponentMapping: Record<EComponents, React.FC<{ value: any }>> = {
-    [EComponents.TITLE]: ViewTitle,
+    [EComponents.INPUT]: ViewTitle,
     // @todo add view component for number
     [EComponents.NUMBER]: ViewTitle,
   };

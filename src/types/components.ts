@@ -9,12 +9,12 @@ export type IBody = {
 };
 
 export enum EComponents {
-  TITLE = 'TITLE',
+  INPUT = 'INPUT',
   NUMBER = 'NUMBER',
 }
 
 export const EComponentNameMap: Record<EComponents, string> = {
-  [EComponents.TITLE]: 'Title',
+  [EComponents.INPUT]: 'Input',
   [EComponents.NUMBER]: 'Number',
 };
 
