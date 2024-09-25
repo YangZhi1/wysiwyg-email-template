@@ -6,7 +6,7 @@ import { observer } from 'mobx-react';
 import React from 'react';
 import { IFormProps } from '@src/types/components';
 
-const Edit = (props: IFormProps) => {
+const Edit = (props: IFormProps<any>) => {
   const formRef = React.useRef<FormInstance>(null);
   const formLayout = props?.formLayout;
 

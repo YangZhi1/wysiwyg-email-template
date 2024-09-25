@@ -4,11 +4,16 @@ import View from './View';
 import './index.css';
 
 export const Editor = () => {
-  const formProps: IFormProps = {
+  const formProps: IFormProps<any> = {
     formLayout: {
       name: {
         label: 'Name',
         type: EComponents.INPUT,
+        props: {
+          placeholder: 'Enter name',
+          showCount: true,
+          maxLength: 100,
+        },
       },
       bodyText: {
         label: 'Body Text',
@@ -20,7 +25,7 @@ export const Editor = () => {
       },
     },
     initialValues: {
-      name: 'Title',
+      // name: 'Name',
       bodyText: 'Body Text',
       number: 101010,
     },

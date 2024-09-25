@@ -14,7 +14,7 @@ import React from 'react';
 class ComponentsStore {
   components: IComponentItem[] = [];
 
-  editComponentMapping: Record<EComponents, IComponentType> = {
+  editComponentMapping: Record<EComponents, IComponentType<any>> = {
     [EComponents.INPUT]: Input,
     [EComponents.NUMBER]: InputNumber,
   };
@@ -45,7 +45,7 @@ class ComponentsStore {
   };
 
   getComponentsByFormLayout(
-    layout?: IFormProps['formLayout']
+    layout?: IFormProps<any>['formLayout']
   ): React.ReactNode[] {
     if (!layout) return [undefined];
     return Object.keys(layout).map((key) => {
@@ -57,6 +57,7 @@ class ComponentsStore {
           name={key}
           label={current.label}
           type={current.type}
+          props={current.props}
         />
       );
     });

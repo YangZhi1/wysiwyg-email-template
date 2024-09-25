@@ -1,3 +1,4 @@
+import { InputNumberProps, InputProps } from 'antd';
 import React from 'react';
 
 export type ITitle = {
@@ -23,17 +24,20 @@ export type IComponentItem = {
   key: string;
 };
 
-export type IComponentProps = {
+export type IProps = InputProps | InputNumberProps;
+
+export type IComponentProps<T extends IProps> = {
   name: string;
   label?: string;
   type: EComponents;
+  props?: T;
 };
 
-export type IFormProps = {
-  formLayout?: Record<string, Omit<IComponentProps, 'name'>>;
+export type IFormProps<T extends IProps> = {
+  formLayout?: Record<string, Omit<IComponentProps<T>, 'name'>>;
   initialValues?: Record<string, any>;
 };
 
-export type IComponentType = React.FC<IComponentProps>;
+export type IComponentType<T extends IProps> = React.FC<IComponentProps<T>>;
 
 export type IComponents = null | ITitle;

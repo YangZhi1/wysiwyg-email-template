@@ -1,10 +1,12 @@
 import { IComponentProps } from '@src/types/components';
-import { Form, Input as AntInput } from 'antd';
+import { Form, Input as AntInput, InputProps } from 'antd';
 
-const Input = ({ name, label }: IComponentProps) => {
+const Input = (inputProps: IComponentProps<InputProps>) => {
+  const { label, name, props } = inputProps;
+
   return (
     <Form.Item label={label} name={name}>
-      <AntInput />
+      <AntInput {...props} />
     </Form.Item>
   );
 };
